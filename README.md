@@ -93,7 +93,11 @@ git clone https://github.com/salomonelli/best-resume-ever.git
 
 
 6. Export your resume as pdf by running the command `npm run export`. In order to avoid errors due to the concurrency of two  `npm run` commands, stop the execution of the previus `npm run dev` and then type the export command.
-
+```
+# fix Puppeteer Error: Chromium revision is not downloaded
+echo 'ignore-scripts=true' >> ~/.npmrc
+node node_modules/puppeteer/install.js
+```
 All resumes will be exported to the `pdf/` folder.
 
 <br>
