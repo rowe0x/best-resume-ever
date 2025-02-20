@@ -1,98 +1,76 @@
 /* #*/ export const PERSON = `
-# Any fields left unchanged, please delete so your resume is fully yours!
-
 name:
-  first: John
-  middle:
-  last: Doe
-about: Hi, my name is John Doe. I'm just about the most boring type of person you could
-       possibly imagine. I like collecting leaves from the tree in my back yard and documenting
-       each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
-position: Software Developer
-
+  first: 罗
+  last: 锦威
+about: 熟悉分布式系统的原理和实现，follow through线上困难问题，相信及热爱技术，追求技术的精进。
+position: 软件工程师
 birth:
-  year: 1990
-  location: New York
-
-# you may add more experiences by duplicating the template
-
+  year: 1993
+  location: 上海
 experience:
-- company: Company A
-  position: Developer
-  timeperiod: since January 2016
-  description: Programming and watching cute cat videos.
-  website: https://example.com
-
-- company: Company B
-  position: Frontend Developer
-  timeperiod: January 2015 - December 2015
-  description: Fulfillment of extremely important tasks.
-
-- company: Company C
-  position: Trainee
-  timeperiod: March 2014 - December 2014
-  description: Making coffee and baking cookies.
-
+- company:  百度
+  position:  资深工程师
+  timeperiod: 2020.07 - 至今
+  description: 推荐架构团队负责云原生数据库开发和维护
+  list:
+    - 分布式 KV 存储系统，基于 rocksdb 构建高性能分布式存储系统，支持共识和 primary-sencondary 协议。实例数目10万级别，相比竞品节省成本超过50%，成为移动生态BG最流行的 KV 存储解决方案。
+    - 分布式 KV 存储系统, 通用存储引擎性能提升，创新性解决5系内核落地 io_uring 延迟抖动问题，实现 FIFO cache 提升同步效率，实现吞吐超过20%的提升。
+    - 分布式 KV 存储系统，小 value 存储引擎优化，raft log 和 rocksdb wal 合并， raft group 和 rocksdb CF 物理映射提升扩容效率，优化 rocksdb compaction 策略，解决 group（CF）分裂回收不及时问题。
+    - 分布式 KV 存储系统，服务稳定性保障，实现有状态服务弹性上云挑战性大，通过服务单点自愈能力增强，线上疑难杂症攻克，并推进上下游团队提升全链路稳定性等手段，为业务规模化应用扫清障碍。
+    - Service Mesh 系统， 负责控制面研发，优化性能实现万级别实例链接托管，提升业务连接稳定性，有效缓解业务单点和雪崩 case。
+- company: 趣头条
+  position:  软件工程师
+  timeperiod: 2018.08 - 2020.07
+  description: 基础架构团队参与服务治理相关项目，包括 Trace、配置中心、ab实验等。
+  list:
+    - 链路追踪系统，基于开源分布式追踪系统 jaeger， 规模化实现服务之间调用关系的观测，主要负责节点的关系的维护和统计，该系统已经作为服务治理的标准推广全公司使用。
+    - 配置中心，负责配置中心 sdk 的设计和开发，同时作为项目的owner对项目进行管理，该系统作为公司规范推广全公司使用。
+    - ab实验平台，负责实验平台、分流服务的设计和开发， QPS峰值达到50W，该平台的数据作为策略LR的依据。
+    - 短信平台，重构现有的短信网关，进行服务拆分、服务治理，包括限流和熔断，该系统承接趣头条所有业务短信需求。
+- company: 会分期
+  position: 软件工程师
+  timeperiod: 2017.08 - 2018.08
+  description: 分期业务团队，主导交易系统开发
+  list:
+    - 分期交易系统，分期交易系统主要实现分期业务的用户还款功能，包括主动还款及代扣，订单的状态采用有限状态机维护，状态变更的回调利用信号实现解耦。 代扣基于任务队列Celery。调研最佳实践并修复使用中的问题，在满足吞吐量的同时，实现生产者、消费者高可用。
+- company: 腾讯
+  position: 数据工程师
+  timeperiod: 2016.04 - 2017.07
+  description: 财付通交易类核心数据库Devops团队从事自动化工具开发
+  list:
+    - DB 变更自动化系统，主导实现DB变更和查询的自动化，DB变更涉及DML变更以及 DDL 的变更，通过FSM实现parser解析出待执行的SQL，并加入风险控制及数据备份，财付通线上数据库字符集采用Latin1，统一处理字符编码问题。
+    - DB 冷备系统，主导实现核心数据库5000+实例的备份系统， 备份系统以一定的策略采用多线程备份工具及binglog工具分别实现全量、增量备份，周期进行还原演练。
+- company: 腾讯
+  position: 数据开发实习生
+  timeperiod: 2015.06 - 2016.04
+  description: 财付通交易类核心数据库Devops团队从事自动化工具开发
 education:
-- degree: Master of Arts
-  timeperiod: March 2012 - December 2013
-  description: Major in Hacking and Computer Penetration, University A, New York, USA.
-  website: https://example.com
-
-- degree: Bachelor of Science
-  timeperiod: March 2009 - December 2011
-  description: Major in Engineering, University B, Los Angeles, USA.
-
-# skill level goes from 0 to 100
+- degree: 本科 机械电子工程
+  timeperiod: 2011.09 - 2016.04
+  description: 电子科技大学
 skills:
-- name: HTML5
-  level: 99
-- name: CSS3
-  level: 95
-- name: JavaScript
-  level: 97
-- name: Node.js
-  level: 93
-- name: Angular 2
-  level: 60
-- name: TypeScript
+- name: C++
   level: 80
-- name: ES.Next
-  level: 70
-- name: Docker
-  level: 99
-knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
-  (English and Klingon).
-
-projects:
-- name: best-resume-ever
-  platform: Vue
-  timeperiod: February 2016
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
-  url: https://github.com/salomonelli/best-resume-ever
-
-# optional, not all resume templates have hobbies included
-hobbies:
-- name: Video Games
-  iconClass: fa fa-gamepad
-  url: https://example.com
-
-- name: Drawing
-  iconClass: fa fa-pencil
-  url: https://example.com
-
-contributions:
-- name: best-resume-ever
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes.
-  url: https://github.com/salomonelli/best-resume-ever
+- name: bRPC
+  level: 80
+- name: io_uring
+  level: 80
+- name: rocksdb
+  level: 80
+- name: Go
+  level: 80
+- name: Python
+  level: 90
+- name: MySQL 
+  level: 90
+- name: Redis
+  level: 90
 
 contact:
-  email: john.doe@email.com
-  phone: 0123 456789
-  street: 1234 Broadway
-  city: New York
-  website: johndoe.com
-  github: johnyD
-# en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el, nb-no
-lang: en
+  email: rowe0x@gmail.com
+  github: rowe0x
+  city: 上海
+  phone: 15622898417
+# en， de， fr， pt， ca， cn， it， es， th， pt-br， ru， sv， id， hu， pl， ja， ka， nl， he， zh-tw， lt， ko， el
+lang: cn
 `
